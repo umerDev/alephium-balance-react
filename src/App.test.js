@@ -56,3 +56,16 @@ test("go to about page", () => {
   //assert
   expect(screen.getByText("on the contact page")).toBeInTheDocument();
 });
+
+test("go to about page, then back to home", () => {
+  //arrange
+  render(<App />);
+  const aboutLink = screen.getByRole("link", { name: "About" });
+  const homeLink = screen.getByRole("link", { name: "Home" });
+
+  fireEvent.click(aboutLink);
+  expect(screen.getByText("on the contact page")).toBeInTheDocument();
+
+  fireEvent.click(homeLink);
+  expect(screen.getByText("Home View")).toBeInTheDocument();
+});
