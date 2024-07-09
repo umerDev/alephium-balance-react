@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
-import { CounterButtons } from "../Component/CounterButtons";
+import React from "react";
+import { SearchButton } from "../Component/Search";
 const Home = () => {
   return (
     <div style={{ padding: 20 }}>
-      <h2>Home View</h2>
-      <CounterButtons></CounterButtons>
+      <h2>Enter an alephium address</h2>
+      <SearchButton></SearchButton>
     </div>
   );
 };

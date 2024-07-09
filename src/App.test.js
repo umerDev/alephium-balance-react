@@ -4,7 +4,7 @@ import App from "./App";
 test("renders home view text", () => {
   //arrange
   render(<App />);
-  const linkElement = screen.getByText(/home view/i);
+  const linkElement = screen.getByText(/Enter an alephium address/i);
   //assert
   expect(linkElement).toBeInTheDocument();
 });
@@ -67,5 +67,5 @@ test("go to about page, then back to home", () => {
   expect(screen.getByText("on the contact page")).toBeInTheDocument();
 
   fireEvent.click(homeLink);
-  expect(screen.getByText("Home View")).toBeInTheDocument();
+  expect(screen.getByText("Enter an alephium address")).toBeInTheDocument();
 });
